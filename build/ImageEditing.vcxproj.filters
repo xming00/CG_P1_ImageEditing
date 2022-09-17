@@ -1,45 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\CG\ImageEditing-master\ImageEditing-master\src\Main.cpp">
+    <ClCompile Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CG\ImageEditing-master\ImageEditing-master\src\ImageWidget.cpp">
+    <ClCompile Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\ImageWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CG\ImageEditing-master\ImageEditing-master\src\ScriptHandler.cpp">
+    <ClCompile Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\ScriptHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CG\ImageEditing-master\ImageEditing-master\src\TargaImage.cpp">
+    <ClCompile Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\CG\ImageEditing-master\ImageEditing-master\src\Globals.h">
+    <ClInclude Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\Globals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CG\ImageEditing-master\ImageEditing-master\src\Globals.inl">
+    <ClInclude Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\Globals.inl">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CG\ImageEditing-master\ImageEditing-master\src\ImageWidget.h">
+    <ClInclude Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\ImageWidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CG\ImageEditing-master\ImageEditing-master\src\ScriptHandler.h">
+    <ClInclude Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\ScriptHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CG\ImageEditing-master\ImageEditing-master\src\TargaImage.h">
+    <ClInclude Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\CG\ImageEditing-master\ImageEditing-master\CMakeLists.txt" />
+    <CustomBuild Include="D:\CG\ImageEditing-master\CG_P1_ImageEditing\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{17B4ABE8-BACD-329A-816B-EAEB08CA822C}</UniqueIdentifier>
+      <UniqueIdentifier>{BC1CAE63-BD4D-3A93-BBBB-E5E801118596}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{C177141B-1618-33E9-9F73-7FC238D5D1E6}</UniqueIdentifier>
+      <UniqueIdentifier>{7D07B071-D447-3982-B0EF-25BD96F2D9CC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

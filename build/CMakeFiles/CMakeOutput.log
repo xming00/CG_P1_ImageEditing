@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
 Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
 
-已經開始建置於 2022/9/5 下午 05:36:38。
-節點 1 (預設目標) 上的專案 "D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.vcxproj"。
+已經開始建置於 2022/9/9 下午 07:15:32。
+節點 1 (預設目標) 上的專案 "D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.vcxproj"。
 PrepareForBuild:
   正在建立目錄 "Debug\"。
   正在建立目錄 "Debug\CompilerIdC.tlog\"。
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   D:\Program Files(X86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.exe
+  CompilerIdC.vcxproj -> D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,20 +29,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   正在刪除檔案 "Debug\CompilerIdC.tlog\unsuccessfulbuild"。
   正在變更時間戳記 "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate"。
-專案 "D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.vcxproj" (預設目標) 建置完成。
+專案 "D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdC\CompilerIdC.vcxproj" (預設目標) 建置完成。
 
 建置成功。
     0 個警告
     0 個錯誤
 
-經過時間 00:00:02.81
+經過時間 00:00:02.45
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -54,8 +54,8 @@ The output was:
 Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
 Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
 
-已經開始建置於 2022/9/5 下午 05:36:41。
-節點 1 (預設目標) 上的專案 "D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.vcxproj"。
+已經開始建置於 2022/9/9 下午 07:15:35。
+節點 1 (預設目標) 上的專案 "D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.vcxproj"。
 PrepareForBuild:
   正在建立目錄 "Debug\"。
   正在建立目錄 "Debug\CompilerIdCXX.tlog\"。
@@ -66,7 +66,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   D:\Program Files(X86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -74,46 +74,46 @@ PostBuildEvent:
 FinalizeBuildStatus:
   正在刪除檔案 "Debug\CompilerIdCXX.tlog\unsuccessfulbuild"。
   正在變更時間戳記 "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate"。
-專案 "D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (預設目標) 建置完成。
+專案 "D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\3.21.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (預設目標) 建置完成。
 
 建置成功。
     0 個警告
     0 個錯誤
 
-經過時間 00:00:01.49
+經過時間 00:00:00.95
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/CMakeTmp
+Change Dir: D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files(X86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_b5cd4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
+Run Build Command(s):D:/Program Files(X86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_15cfa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
 Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x64
   Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b5cd4.dir\Debug\\" /Fd"cmTC_b5cd4.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
-  cmTC_b5cd4.vcxproj -> D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\CMakeTmp\Debug\cmTC_b5cd4.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15cfa.dir\Debug\\" /Fd"cmTC_15cfa.dir\Debug\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
+  cmTC_15cfa.vcxproj -> D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\CMakeTmp\Debug\cmTC_15cfa.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/CMakeTmp
+Change Dir: D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files(X86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9e5d6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
+Run Build Command(s):D:/Program Files(X86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6fd36.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine for .NET Framework 16.11.2+f32259642 版
 Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30145 for x64
   Copyright (C) Microsoft Corporation.  著作權所有，並保留一切權利。
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9e5d6.dir\Debug\\" /Fd"cmTC_9e5d6.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_9e5d6.vcxproj -> D:\CG\ImageEditing-master\ImageEditing-master\build\CMakeFiles\CMakeTmp\Debug\cmTC_9e5d6.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6fd36.dir\Debug\\" /Fd"cmTC_6fd36.dir\Debug\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\Program Files\CMake\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_6fd36.vcxproj -> D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\CMakeFiles\CMakeTmp\Debug\cmTC_6fd36.exe
 
 
 

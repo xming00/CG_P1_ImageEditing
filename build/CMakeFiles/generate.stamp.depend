@@ -1,9 +1,9 @@
 # CMake generation dependency list for this directory.
-D:/CG/ImageEditing-master/ImageEditing-master/CMakeLists.txt
-D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CMakeCCompiler.cmake
-D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CMakeCXXCompiler.cmake
-D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CMakeRCCompiler.cmake
-D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/3.21.3/CMakeSystem.cmake
+D:/CG/ImageEditing-master/CG_P1_ImageEditing/CMakeLists.txt
+D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CMakeCCompiler.cmake
+D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CMakeCXXCompiler.cmake
+D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CMakeRCCompiler.cmake
+D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/3.21.3/CMakeSystem.cmake
 D:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCCompiler.cmake.in
 D:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCCompilerABI.c
 D:/Program Files/CMake/share/cmake-3.21/Modules/CMakeCInformation.cmake

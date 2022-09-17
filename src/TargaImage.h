@@ -71,6 +71,8 @@ class TargaImage
     private:
 	// helper function for format conversion
         void RGBA_To_RGB(unsigned char *rgba, unsigned char *rgb);
+        // helper to get RGBA format
+        unsigned char* Get_RGBA(int x, int y);
 
         // reverse the rows of the image, some targas are stored bottom to top
 	TargaImage* Reverse_Rows(void);

@@ -1,6 +1,6 @@
-^D:\CG\IMAGEEDITING-MASTER\IMAGEEDITING-MASTER\CMAKELISTS.TXT
+^D:\CG\IMAGEEDITING-MASTER\CG_P1_IMAGEEDITING\CMAKELISTS.TXT
 setlocal
-"D:\Program Files\CMake\bin\cmake.exe" -SD:/CG/ImageEditing-master/ImageEditing-master -BD:/CG/ImageEditing-master/ImageEditing-master/build --check-stamp-file D:/CG/ImageEditing-master/ImageEditing-master/build/CMakeFiles/generate.stamp
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CG/ImageEditing-master/CG_P1_ImageEditing -BD:/CG/ImageEditing-master/CG_P1_ImageEditing/build --check-stamp-file D:/CG/ImageEditing-master/CG_P1_ImageEditing/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -211,7 +211,20 @@ TargaImage* TargaImage::Load_Image(char *filename)
 ///////////////////////////////////////////////////////////////////////////////
 bool TargaImage::To_Grayscale()
 {
-	ClearToBlack();
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            unsigned char* d = Get_RGBA(j, i);
+            float t = 0.3 * d[RED] + 0.59 * d[GREEN] + 0.11 * d[BLUE];
+
+            d[RED] = t;
+            d[GREEN] = t;
+            d[BLUE] = t;
+
+        }
+
+    }
 	return false;
 }// To_Grayscale
 
@@ -224,8 +237,23 @@ bool TargaImage::To_Grayscale()
 ///////////////////////////////////////////////////////////////////////////////
 bool TargaImage::Quant_Uniform()
 {
-    ClearToBlack();
-    return false;
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            unsigned char* d = Get_RGBA(j, i);
+            d[RED] >>= 5;
+            d[RED] <<= 5;
+            d[GREEN] >>= 5;
+            d[GREEN] <<= 5;
+            d[BLUE] >>= 6;
+            d[BLUE] <<= 6;
+            
+        }
+
+    }
+
+    return true;
 }// Quant_Uniform
 
 
@@ -299,8 +327,39 @@ bool TargaImage::Dither_Bright()
 ///////////////////////////////////////////////////////////////////////////////
 bool TargaImage::Dither_Cluster()
 {
-    ClearToBlack();
-    return false;
+    double mask[][4] = { {0.7059, 0.3529, 0.5882, 0.2353},
+        {0.0588, 0.9412, 0.8235, 0.4118},
+        {0.4706, 0.7647, 0.8824, 0.1176 },
+        {0.1765, 0.5294, 0.2941, 0.6471 }
+};
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            unsigned char* d = Get_RGBA(j, i);
+            double t = 0.30 * d[RED] + 0.59 * d[GREEN] + 0.11 * d[BLUE];
+            if ((t / 255.0) >= mask[i % 4][j % 4])
+            {
+                d[RED] = 255;
+                d[GREEN] = 255;
+                d[BLUE] = 255;
+
+            }
+            else
+            {
+                d[RED] = 0;
+                d[GREEN] = 0;
+                d[BLUE] = 0;
+
+            }
+
+
+        }
+
+    }
+
+
+    return true;
 }// Dither_Cluster
 
 
@@ -627,6 +686,19 @@ void TargaImage::RGBA_To_RGB(unsigned char *rgba, unsigned char *rgb)
 	    }
     }
 }// RGA_To_RGB
+
+//////////////////////////////////////////////////////////////////////////////
+//
+//      Help me to get RBGA data
+//      
+//
+///////////////////////////////////////////////////////////////////////////////
+unsigned char* TargaImage:: Get_RGBA(int x, int y)
+{
+    unsigned char* pos = &data[x * 4 + y * width * 4];
+    return pos;
+}
+
 
 
 ///////////////////////////////////////////////////////////////////////////////
