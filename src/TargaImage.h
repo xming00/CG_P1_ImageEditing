@@ -37,7 +37,7 @@ class TargaImage
 
         bool Quant_Uniform();
         bool Quant_Populosity();
-        bool Quant_Median();
+       // bool Quant_Median();
 
         bool Dither_Threshold();
         bool Dither_Random();
@@ -72,7 +72,7 @@ class TargaImage
 	// helper function for format conversion
         void RGBA_To_RGB(unsigned char *rgba, unsigned char *rgb);
         // helper to get RGBA format
-        unsigned char* Get_RGBA(int x, int y);
+        unsigned char* Get_RGBA(int x, int y , unsigned char* D);
 
         // reverse the rows of the image, some targas are stored bottom to top
 	TargaImage* Reverse_Rows(void);
@@ -82,6 +82,8 @@ class TargaImage
 
 	// Draws a filled circle according to the stroke data
         void Paint_Stroke(const Stroke& s);
+    // for convenient calculate
+        void fill_Float_Value(int num , float value, float* arr);
 
     // members
     public:

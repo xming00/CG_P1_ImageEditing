@@ -215,7 +215,7 @@ bool TargaImage::To_Grayscale()
     {
         for (int j = 0; j < width; j++)
         {
-            unsigned char* d = Get_RGBA(j, i);
+            unsigned char* d = Get_RGBA(j, i, data);
             float t = 0.3 * d[RED] + 0.59 * d[GREEN] + 0.11 * d[BLUE];
 
             d[RED] = t;
@@ -241,7 +241,7 @@ bool TargaImage::Quant_Uniform()
     {
         for (int j = 0; j < width; j++)
         {
-            unsigned char* d = Get_RGBA(j, i);
+            unsigned char* d = Get_RGBA(j, i, data);
             d[RED] >>= 5;
             d[RED] <<= 5;
             d[GREEN] >>= 5;
@@ -336,7 +336,7 @@ bool TargaImage::Dither_Cluster()
     {
         for (int j = 0; j < width; j++)
         {
-            unsigned char* d = Get_RGBA(j, i);
+            unsigned char* d = Get_RGBA(j, i, data);
             double t = 0.30 * d[RED] + 0.59 * d[GREEN] + 0.11 * d[BLUE];
             if ((t / 255.0) >= mask[i % 4][j % 4])
             {
@@ -497,7 +497,7 @@ bool TargaImage::Difference(TargaImage* pImage)
         RGBA_To_RGB(data + i, rgb1);
         RGBA_To_RGB(pImage->data + i, rgb2);
 
-        data[i] = abs(rgb1[0] - rgb2[0]);
+        data[  i] = abs(rgb1[0] - rgb2[0]);
         data[i+1] = abs(rgb1[1] - rgb2[1]);
         data[i+2] = abs(rgb1[2] - rgb2[2]);
         data[i+3] = 255;
@@ -514,8 +514,59 @@ bool TargaImage::Difference(TargaImage* pImage)
 ///////////////////////////////////////////////////////////////////////////////
 bool TargaImage::Filter_Box()
 {
-    ClearToBlack();
-    return false;
+    int Box_mask[5][5];
+    int sum[3] = { 0 };
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            Box_mask[i][j] = 1;
+        }
+    }
+    //cout  << "box_mask[3][3] : " << Box_mask[3][3] << endl;
+    for (int y = 0; y < height; y++)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                sum[i] = 0;
+            }
+            for (int i = -2; i < 3; i++)
+            {
+                for (int j = -2; j < 3; j++)
+                {
+                    if (y + i < 0 || y + i >= height)
+                    {
+                        continue;
+                    }
+                    if (x + j < 0 || x + j >= width )
+                    {
+                        continue;
+                    }
+                    unsigned char* d = Get_RGBA(x + j, y + i, data);
+                    sum[  RED] += (d[  RED] * Box_mask[2 + i][2 + j]);
+                    sum[GREEN] += (d[GREEN] * Box_mask[2 + i][2 + j]);
+                    sum[ BLUE] += (d[ BLUE] * Box_mask[2 + i][2 + j]);
+
+                }
+
+            }
+            unsigned char* nowD = Get_RGBA(x, y, data);
+           // cout << "sum(red): " << sum[RED] << endl;
+            nowD[  RED] = sum[  RED] / 25;
+            nowD[GREEN] = sum[GREEN] / 25;
+            nowD[ BLUE] = sum[ BLUE] / 25;
+
+
+        }
+
+
+    }
+
+
+
+    return true;
 }// Filter_Box
 
 
@@ -604,10 +655,88 @@ bool TargaImage::NPR_Paint()
 //
 //      Halve the dimensions of this image.  Return success of operation.
 //
+//      use filter to origin , then half size forward mapping
+// 
 ///////////////////////////////////////////////////////////////////////////////
 bool TargaImage::Half_Size()
 {
-    ClearToBlack();
+    float mask[][3] = { {0.0625, 0.1250, 0.0625},
+                        {0.1250, 0.2500, 0.1250},
+                        {0.0625, 0.1250, 0.0625} };
+    // DO  filter
+    float sum[3] = { 0 };
+
+    for (int y = 0; y < height; y++)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            fill_Float_Value(3, 0, sum);
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
+                {
+                    // boundry case
+                    int correction[2] = { 0 };
+                    if (y + i < 0 || y + i >= height)
+                    {
+                        correction[1] = -2 * i; // mirror
+                    }
+                    if (x + j < 0 || x + j >= width)
+                    {
+                        correction[0] = -2 * j; // mirror
+                    }
+                    // normal case
+                    unsigned char* d = Get_RGBA(x+j+correction[0], y+i+correction[1], data);
+                    sum[  RED] += (d[  RED] * mask[1 + i][1 + j]);
+                    sum[GREEN] += (d[GREEN] * mask[1 + i][1 + j]);
+                    sum[ BLUE] += (d[ BLUE] * mask[1 + i][1 + j]);
+                }
+            }
+            unsigned char* nowD = Get_RGBA(x,y,data);
+            nowD[  RED] = sum[  RED];
+            nowD[GREEN] = sum[GREEN];
+            nowD[ BLUE] = sum[ BLUE];
+        }
+
+    }
+    // delete data , then make new data (need temp data to catch old data
+    unsigned char* temp_Data = new unsigned char[width * height * 4];
+    memcpy(temp_Data, data, width * height * 4);
+    delete[]data;
+    data = new unsigned char[width / 2 * height / 2 * 4 ];
+    memset(data, 0, (width / 2) * (height / 2) * 4);
+    for (int y = 0;  y < height; y++)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            // f(u, v) =  (0.5u, 0.5v) = (x, y)  
+            // &D[x * 4 + y * width * 4]
+            
+            // have a exception( when  )
+            if (y / 2 == height / 2 || x / 2 == width / 2)
+            {
+                continue;
+            }
+
+            unsigned char* Data_RGBA  = &data[int(x/2) * 4 + int(y/2) * int(width/2) * 4];
+            unsigned char* TData_RGBA = Get_RGBA(x, y, temp_Data);
+            Data_RGBA[  RED] = TData_RGBA[  RED];
+            Data_RGBA[GREEN] = TData_RGBA[GREEN];
+            Data_RGBA[ BLUE] = TData_RGBA[ BLUE];
+            Data_RGBA[    3] = TData_RGBA[    3];
+
+
+        }
+
+    }
+    width  /= 2;
+    height /= 2;
+    // change widget size
+
+    
+    delete[]temp_Data;
+
+
     return false;
 }// Half_Size
 
@@ -693,9 +822,9 @@ void TargaImage::RGBA_To_RGB(unsigned char *rgba, unsigned char *rgb)
 //      
 //
 ///////////////////////////////////////////////////////////////////////////////
-unsigned char* TargaImage:: Get_RGBA(int x, int y)
+unsigned char* TargaImage:: Get_RGBA(int x, int y, unsigned char* D)
 {
-    unsigned char* pos = &data[x * 4 + y * width * 4];
+    unsigned char* pos = &D[x * 4 + y * width * 4];
     return pos;
 }
 
@@ -745,6 +874,20 @@ void TargaImage::ClearToBlack()
 {
     memset(data, 0, width * height * 4);
 }// ClearToBlack
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//     for convenient to filter
+//
+///////////////////////////////////////////////////////////////////////////////
+void TargaImage::fill_Float_Value(int num, float value, float* arr)
+{
+    for (int i = 0; i < num; i++)
+    {
+        arr[i] = value;
+    }
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////
