@@ -235,6 +235,7 @@ bool CScriptHandler::HandleCommand(const char* sCommand, TargaImage*& pImage)
         case FILTER_GAUSS_N:
         {
             char *sN = strtok(NULL, c_sWhiteSpace);
+            
             int N = atoi(sN);
             if (N % 2 != 1) {
                cout << "N \"" << N << "\" is not allowed; N must be an odd number." << endl;

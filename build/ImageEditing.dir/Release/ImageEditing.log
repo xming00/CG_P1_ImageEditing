@@ -1,0 +1,37 @@
+﻿  TargaImage.cpp
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(219,12): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(221,13): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(222,15): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(223,14): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(406,12): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(490,38): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(497,42): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(504,40): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(549,38): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(556,42): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(563,40): warning C4244: '=': 將 'double' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(602,10): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(723,38): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(731,42): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(739,40): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(780,38): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(788,42): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(796,40): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1039,51): warning C4244: '+=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1040,55): warning C4244: '+=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1041,53): warning C4244: '+=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1137,20): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1139,26): warning C4244: '=': 將 'double' 轉換為 '_Ty'，由於類型不同，可能導致資料遺失
+          with
+          [
+              _Ty=int
+          ]
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1142,20): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1147,20): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1149,21): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1156,20): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1158,21): warning C4018: '<': signed/unsigned 不相符
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1490,23): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1491,27): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+D:\CG\ImageEditing-master\CG_P1_ImageEditing\src\TargaImage.cpp(1492,25): warning C4244: '=': 將 'float' 轉換為 'unsigned char'，由於類型不同，可能導致資料遺失
+  ImageEditing.vcxproj -> D:\CG\ImageEditing-master\CG_P1_ImageEditing\build\Release\ImageEditing.exe

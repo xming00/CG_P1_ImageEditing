@@ -15,9 +15,20 @@
 #include <Fl/Fl.h>
 #include <Fl/Fl_Widget.h>
 #include <stdio.h>
+#include <vector>
 
 class Stroke;
 class DistanceImage;
+
+typedef struct Color
+{
+    unsigned char r = 0;
+    unsigned char g = 0;
+    unsigned char b = 0;
+    int count = 0;
+    bool beTake = false;
+
+}c;
 
 class TargaImage
 {
@@ -69,6 +80,8 @@ class TargaImage
         bool Rotate(float angleDegrees);
 
     private:
+        
+
 	// helper function for format conversion
         void RGBA_To_RGB(unsigned char *rgba, unsigned char *rgb);
         // helper to get RGBA format
@@ -84,7 +97,12 @@ class TargaImage
         void Paint_Stroke(const Stroke& s);
     // for convenient calculate
         void fill_Float_Value(int num , float value, float* arr);
-
+    // for find_closest_palette_color    
+        double euDistance(int nowX, int nowY, int nowZ, int x, int y, int z);
+    // find colsest palette color
+        Color Find_Closest_Palette_Color(unsigned char* d, std::vector<Color> Top256);
+    // for boundry check
+        bool Boundry_Check(int x, int y);
     // members
     public:
         int		width;	    // width of the image in pixels
@@ -92,6 +110,8 @@ class TargaImage
         unsigned char	*data;	    // pixel data for the image, assumed to be in pre-multiplied RGBA format.
 
 };
+
+
 
 class Stroke { // Data structure for holding painterly strokes.
 public:
